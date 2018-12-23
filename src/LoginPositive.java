@@ -22,9 +22,9 @@ public class LoginPositive {
         WebElement password_field = driver.findElement(By
                 .xpath("//input[@formcontrolname='password']"));
         email_field.click();
-        email_field.sendKeys("marina@123.com");
+        email_field.sendKeys("jmenka@gmail.com");
         password_field.click();
-        password_field.sendKeys("marina");
+        password_field.sendKeys("221263");
         WebElement login_button=driver.findElement(By
                 .xpath("//span[contains(text(),'Log in')]"));
         login_button.click();
