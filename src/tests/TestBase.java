@@ -12,11 +12,9 @@ import org.testng.annotations.BeforeSuite;
 
 import java.util.Random;
 
-/**
- * Created by Inka on 16-Dec-18.
- */
+
 public class TestBase {
-    public WebDriver driver; //=new ChromeDriver();
+    public WebDriver driver;
     @BeforeMethod
     public void initWebDriver(){
         driver = new ChromeDriver();
@@ -24,7 +22,6 @@ public class TestBase {
         driver.manage().window().maximize();
     }
 
-    //@AfterSuite
     @AfterMethod
     public void tearDown(){
         driver.quit();

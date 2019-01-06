@@ -6,10 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by Inka on 23-Dec-18.
- */
+
 public abstract class PageBase {
+
     protected WebDriver driver;
     public PageBase(WebDriver driver){
         this.driver = driver;
@@ -26,6 +25,7 @@ public abstract class PageBase {
             e.printStackTrace();
         }
     }
+
     public void waitUntilElementIsLoaded(WebDriver driver,
                                          WebElement element, int time)
     {
