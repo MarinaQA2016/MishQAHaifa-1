@@ -18,6 +18,9 @@ public class HomePageHelper extends PageBase{
     @FindBy(xpath = "//span[contains(text(),'Go to Event list')]")
     WebElement goToEventButton;
 
+    @FindBy (xpath = "//h1[@class='mat-display-3']")
+    WebElement header;
+
 
     public HomePageHelper(WebDriver driver){
         super(driver);
@@ -47,5 +50,14 @@ public class HomePageHelper extends PageBase{
         /*WebElement login = driver.findElement(By
                 .xpath("//span[contains(text(),'Login')]"));*/
         loginButton.click();
+    }
+
+    public void pressCreateAccountButton() {
+        createAccountButton.click();
+    }
+
+
+    public String getHeader() {
+        return header.getText();
     }
 }

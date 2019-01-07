@@ -37,4 +37,12 @@ public abstract class PageBase {
             e.printStackTrace();
         }
     }
+
+    public void setValueToField(WebElement element, String value) {
+        element.click();
+        element.clear();
+        element.sendKeys(value);
+    }
+
+
 }
