@@ -42,4 +42,9 @@ public class AccountCreatePageHelper extends PageBase {
         waitUntilElementIsLoaded(driver, registrationButton,20);
         registrationButton.click();
     }
+
+    public void enterValueToFieldEmailRandom() {
+        String email = latinDigitString(10)+"@gmail.com";
+        setValueToField(emailField,email);
+    }
 }

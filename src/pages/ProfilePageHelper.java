@@ -12,6 +12,8 @@ public class ProfilePageHelper extends PageBase{
     WebElement cancelButton;
     @FindBy (xpath = "//mat-icon[@mattooltip='Menu']")
     WebElement iconButton;
+    @FindBy (xpath = "//h1[@class='classCentr']")
+    WebElement header;
 
     public ProfilePageHelper(WebDriver driver) {
         super(driver);
@@ -20,6 +22,8 @@ public class ProfilePageHelper extends PageBase{
     public void waitUntilPageLoad(){
         waitUntilElementIsLoaded(driver, cancelButton, 40);
         waitUntilElementIsLoaded(driver, iconButton, 40);
+        waitUntilElementIsLoaded(driver, header,10);
+        System.out.println("Cancel button: "+ cancelButton.getText());
     }
 
     public void menuButtonClick(){
@@ -27,4 +31,7 @@ public class ProfilePageHelper extends PageBase{
     }
 
 
+    public String getHeader() {
+        return header.getText();
+    }
 }
