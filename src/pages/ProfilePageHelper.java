@@ -20,9 +20,10 @@ public class ProfilePageHelper extends PageBase{
     }
 
     public void waitUntilPageLoad(){
+        waitUntilElementIsLoaded(driver, header,40);
         waitUntilElementIsLoaded(driver, cancelButton, 40);
         waitUntilElementIsLoaded(driver, iconButton, 40);
-        waitUntilElementIsLoaded(driver, header,10);
+
         System.out.println("Cancel button: "+ cancelButton.getText());
     }
 

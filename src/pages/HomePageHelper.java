@@ -32,6 +32,8 @@ public class HomePageHelper extends PageBase{
                 45);
         waitUntilElementIsLoaded(driver,
                 createAccountButton,40);
+        waitUntilElementIsLoaded(driver, goToEventButton,40);
+
     }
 
     public String getGoToEventButtonName() {
