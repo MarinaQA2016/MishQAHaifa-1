@@ -19,16 +19,19 @@ public class ProfilePageHelper extends PageBase{
         super(driver);
     }
 
-    public void waitUntilPageLoad(){
+    public ProfilePageHelper waitUntilPageLoad(){
         waitUntilElementIsLoaded(driver, header,40);
         waitUntilElementIsLoaded(driver, cancelButton, 40);
         waitUntilElementIsLoaded(driver, iconButton, 40);
 
         System.out.println("Cancel button: "+ cancelButton.getText());
+        return this;
     }
 
-    public void menuButtonClick(){
+    public ProfilePageHelper menuButtonClick(){
+
         iconButton.click();
+        return this;
     }
 
 

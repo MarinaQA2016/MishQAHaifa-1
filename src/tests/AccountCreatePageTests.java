@@ -41,10 +41,10 @@ public class AccountCreatePageTests extends TestBase {
                 .enterValueToFieldPassword("example")
                 .enterValueToFieldRepPassword("example")
                 .pressRegistrationButton();
-        profilePage.waitUntilPageLoad();
-        profilePage.menuButtonClick();
-        menuPage.waitUntilPageLoad();
-        menuPage.pressLogOutButton();
+        profilePage.waitUntilPageLoad()
+                .menuButtonClick();
+        menuPage.waitUntilPageLoad()
+                .pressLogOutButton();
         homePage.waitUntilPageLoad();
         Assert.assertEquals(homePage.getHeader(), "Shabbat in the family circle");
     }

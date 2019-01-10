@@ -14,11 +14,13 @@ public class MenuPageHelper extends PageBase {
     public MenuPageHelper(WebDriver driver) {
         super(driver);
     }
-    public void waitUntilPageLoad(){
+    public MenuPageHelper waitUntilPageLoad(){
         waitUntilElementIsLoaded(driver, logOutButton, 40);
+        return this;
     }
 
-    public void pressLogOutButton(){
+    public MenuPageHelper pressLogOutButton(){
         logOutButton.click();
+        return this;
     }
 }
