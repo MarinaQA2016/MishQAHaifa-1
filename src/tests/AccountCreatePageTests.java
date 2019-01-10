@@ -34,13 +34,13 @@ public class AccountCreatePageTests extends TestBase {
     @Test
     public void createNewAccount(){
         String email1 = latinDigitString(8) + "@gmail.com";
-        homePage.waitUntilPageLoad();
-        homePage.pressCreateAccountButton();
-        accountCreatePage.waitUntilPageLoad();
-        accountCreatePage.enterValueToFieldEmail(email1);
-        accountCreatePage.enterValueToFieldPassword("example");
-        accountCreatePage.enterValueToFieldRepPassword("example");
-        accountCreatePage.pressRegistrationButton();
+        homePage.waitUntilPageLoad()
+                .pressCreateAccountButton();
+        accountCreatePage.waitUntilPageLoad()
+                .enterValueToFieldEmail(email1)
+                .enterValueToFieldPassword("example")
+                .enterValueToFieldRepPassword("example")
+                .pressRegistrationButton();
         profilePage.waitUntilPageLoad();
         profilePage.menuButtonClick();
         menuPage.waitUntilPageLoad();

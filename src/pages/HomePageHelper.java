@@ -26,14 +26,14 @@ public class HomePageHelper extends PageBase{
         super(driver);
     }
 
-    public void waitUntilPageLoad() {
+    public HomePageHelper waitUntilPageLoad() {
         waitUntilElementIsLoaded(driver,
                 loginButton,
                 45);
         waitUntilElementIsLoaded(driver,
                 createAccountButton,40);
         waitUntilElementIsLoaded(driver, goToEventButton,40);
-
+        return this;
     }
 
     public String getGoToEventButtonName() {
@@ -54,8 +54,10 @@ public class HomePageHelper extends PageBase{
         loginButton.click();
     }
 
-    public void pressCreateAccountButton() {
+    public HomePageHelper pressCreateAccountButton() {
+
         createAccountButton.click();
+        return this;
     }
 
 

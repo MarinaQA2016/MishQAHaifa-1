@@ -23,28 +23,37 @@ public class AccountCreatePageHelper extends PageBase {
         super(driver);
     }
 
-    public void waitUntilPageLoad() {
+    public AccountCreatePageHelper waitUntilPageLoad() {
+
         waitUntilElementIsLoaded(driver,cancelButton, 40);
+        return this;
     }
 
-    public void enterValueToFieldEmail(String value) {
+    public  AccountCreatePageHelper enterValueToFieldEmail(String value) {
+
         setValueToField(emailField, value);
+        return this;
     }
 
-    public void enterValueToFieldPassword(String value) {
+    public AccountCreatePageHelper enterValueToFieldPassword(String value) {
+
         setValueToField(passwordField,value);
+        return this;
     }
 
-    public void enterValueToFieldRepPassword(String value) {
+    public AccountCreatePageHelper enterValueToFieldRepPassword(String value) {
         setValueToField(repPasswordField,value);
+        return this;
     }
-    public void pressRegistrationButton(){
+    public AccountCreatePageHelper pressRegistrationButton(){
         waitUntilElementIsLoaded(driver, registrationButton,20);
         registrationButton.click();
+        return this;
     }
 
-    public void enterValueToFieldEmailRandom() {
+    public AccountCreatePageHelper enterValueToFieldEmailRandom() {
         String email = latinDigitString(10)+"@gmail.com";
         setValueToField(emailField,email);
+        return this;
     }
 }
